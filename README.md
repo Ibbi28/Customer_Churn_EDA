@@ -1,111 +1,78 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "9e35f004-fbd9-4ef8-b12c-6ecfc7847f2e",
-   "metadata": {},
-   "source": [
-    "# Telco Customer Churn Analysis: Understanding and Acting on Customer Attrition\n",
-    "\n",
-    "## 🌟 Executive Summary\n",
-    "\n",
-    "This project presents a concise data analysis and visualization of customer churn within a telecommunications dataset. By exploring key customer attributes, services used, contract details, and demographics, the analysis aims to highlight significant factors contributing to churn. The insights derived offer a clear understanding of churn patterns, enabling the identification of high-risk customer segments and informing the development of targeted customer retention strategies.\n",
-    "\n",
-    "---\n",
-    "\n",
-    "## 📊 About the Dataset\n",
-    "\n",
-    "**📘 Context:**\n",
-    "\"Predict behavior to retain customers. You can analyze all relevant customer data and develop focused customer retention programs.\"\n",
-    "— *IBM Sample Data Sets*\n",
-    "\n",
-    "This dataset is instrumental for understanding customer churn behavior and developing effective customer retention strategies through data analysis.\n",
-    "\n",
-    "**📈 Content:**\n",
-    "Each row in the dataset represents a customer, and each column contains customer attributes. Key information includes:\n",
-    "* **Churn Information:** `Churn` (whether the customer left within the last month).\n",
-    "* **Services Signed Up:** `PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `OnlineBackup`, `DeviceProtection`, `TechSupport`, `StreamingTV`, `StreamingMovies`.\n",
-    "* **Customer Account Information:** `tenure`, `Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges`, `TotalCharges`.\n",
-    "* **Demographic Information:** `gender`, `SeniorCitizen`, `Partner`, `Dependents`.\n",
-    "\n",
-    "**💡 Inspiration:**\n",
-    "This project aims to:\n",
-    "* Understand factors contributing to customer churn through in-depth analysis.\n",
-    "* Build a foundation for evaluating and developing customer retention strategies.\n",
-    "* Enhance skills in data preprocessing, exploratory data analysis (EDA), and data visualization.\n",
-    "\n",
-    "**🔗 Data Source:**\n",
-    "The dataset used is publicly available from IBM's sample data sets.\n",
-    "[Telco Customer Churn - IBM Community](https://community.ibm.com/community/user/dataandsolutions/blogs/greg-kogan1/2022/10/25/telco-customer-churn-v2) (This link was mentioned in your \"About Dataset\" in the notebook)\n",
-    "\n",
-    "---\n",
-    "\n",
-    "## 📌 Dashboard Summary: Key Insights & Actions\n",
-    "\n",
-    "This section encapsulates the most critical findings and actionable recommendations derived from the customer churn analysis.\n",
-    "\n",
-    "**🚨 Churn Risk is Highest for:**\n",
-    "* **Month-to-month contracts**\n",
-    "* Customers without **Online Security** or **Tech Support**\n",
-    "* **Senior Citizens**\n",
-    "* Users paying via **Electronic Check**\n",
-    "* Customers in their **first few months** (low tenure & charges)\n",
-    "\n",
-    "**✅ Most Loyal Segments:**\n",
-    "* **Two-year contract holders**\n",
-    "* Customers with **Online Security** and **Tech Support**\n",
-    "* Those with **high Total & Monthly Charges**\n",
-    "* Customers with **No Internet Service**\n",
-    "\n",
-    "**🎯 Strategic Recommendations:**\n",
-    "* **Promote longer contracts** (1–2 years) to significantly reduce churn rates.\n",
-    "* **Bundle Online Security + Tech Support** for new and existing customers to foster higher retention.\n",
-    "* **Engage early:** Target customers with low tenure/charges for proactive support and onboarding assistance.\n",
-    "* **Upsell mid-tier users** to premium plans, which correlates with increased loyalty.\n",
-    "* **Audit “Electronic Check” users** and offer more convenient and reliable auto-pay alternatives.\n",
-    "\n",
-    "---\n",
-    "\n",
-    "## 💻 Technologies Used\n",
-    "\n",
-    "* **Python:** The primary programming language for data analysis.\n",
-    "* **Pandas:** For data manipulation and analysis.\n",
-    "* **NumPy:** For numerical operations.\n",
-    "* **Matplotlib:** For static data visualizations.\n",
-    "* **Seaborn:** For enhanced statistical data visualizations.\n",
-    "* **Plotly:** For interactive and dynamic visualizations.\n",
-    "* **Jupyter Notebook:** For interactive analysis and presentation.\n",
-    "\n",
-    "---\n",
-    "\n",
-    "## ✍️ Author\n",
-    "\n",
-    "* www.linkedin.com/in/ibrahim-muhammad-yousuf\n",
-    "* ibrahimmyousuf2002@gmail.com\n",
-    "\n",
-    "---\n"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.4"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Telco Customer Churn Analysis: Understanding and Acting on Customer Attrition
+
+## 🌟 Executive Summary
+
+This project presents a concise data analysis and visualization of customer churn within a telecommunications dataset. By exploring key customer attributes, services used, contract details, and demographics, the analysis aims to highlight significant factors contributing to churn. The insights derived offer a clear understanding of churn patterns, enabling the identification of high-risk customer segments and informing the development of targeted customer retention strategies.
+
+---
+
+## 📊 About the Dataset
+
+**📘 Context:**  
+"Predict behavior to retain customers. You can analyze all relevant customer data and develop focused customer retention programs."  
+— *IBM Sample Data Sets*
+
+This dataset is instrumental for understanding customer churn behavior and developing effective customer retention strategies through data analysis.
+
+**📈 Content:**  
+Each row in the dataset represents a customer, and each column contains customer attributes. Key information includes:
+
+* **Churn Information:** `Churn` (whether the customer left within the last month)
+* **Services Signed Up:** `PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `OnlineBackup`, `DeviceProtection`, `TechSupport`, `StreamingTV`, `StreamingMovies`
+* **Customer Account Information:** `tenure`, `Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges`, `TotalCharges`
+* **Demographic Information:** `gender`, `SeniorCitizen`, `Partner`, `Dependents`
+
+**💡 Inspiration:**  
+This project aims to:
+* Understand factors contributing to customer churn through in-depth analysis
+* Build a foundation for evaluating and developing customer retention strategies
+* Enhance skills in data preprocessing, exploratory data analysis (EDA), and data visualization
+
+**🔗 Data Source:**  
+The dataset used is publicly available from IBM's sample data sets.  
+[Telco Customer Churn - IBM Community](https://community.ibm.com/community/user/dataandsolutions/blogs/greg-kogan1/2022/10/25/telco-customer-churn-v2)
+
+---
+
+## 📌 Dashboard Summary: Key Insights & Actions
+
+This section encapsulates the most critical findings and actionable recommendations derived from the customer churn analysis.
+
+**🚨 Churn Risk is Highest for:**
+* **Month-to-month contracts**
+* Customers without **Online Security** or **Tech Support**
+* **Senior Citizens**
+* Users paying via **Electronic Check**
+* Customers in their **first few months** (low tenure & charges)
+
+**✅ Most Loyal Segments:**
+* **Two-year contract holders**
+* Customers with **Online Security** and **Tech Support**
+* Those with **high Total & Monthly Charges**
+* Customers with **No Internet Service**
+
+**🎯 Strategic Recommendations:**
+* **Promote longer contracts** (1-2 years) to significantly reduce churn rates
+* **Bundle Online Security + Tech Support** for new and existing customers to foster higher retention
+* **Engage early:** Target customers with low tenure/charges for proactive support and onboarding assistance
+* **Upsell mid-tier users** to premium plans, which correlates with increased loyalty
+* **Audit "Electronic Check" users** and offer more convenient and reliable auto-pay alternatives
+
+---
+
+## 💻 Technologies Used
+
+* **Python:** The primary programming language for data analysis
+* **Pandas:** For data manipulation and analysis
+* **NumPy:** For numerical operations
+* **Matplotlib:** For static data visualizations
+* **Seaborn:** For enhanced statistical data visualizations
+* **Plotly:** For interactive and dynamic visualizations
+* **Jupyter Notebook:** For interactive analysis and presentation
+
+---
+
+## ✍️ Author
+
+* [LinkedIn Profile](https://www.linkedin.com/in/ibrahim-muhammad-yousuf)
+* Email: ibrahimmyousuf2002@gmail.com
